@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registration</title>
+		<meta charset="utf-8">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script type="text/javascript" src="register.js"></script>
+		<link rel="stylesheet" type="text/css" href="reg.css">		
+	</head>
+	<body>
+		<header>
+			<img class="logo" src="hawkins.png" alt="Logo" height="120" width="100">
+			<span class="title">Hawkins Police Department </span>
+			<br><br>
+			<span class="slogan">Dedication against crime.</span>
+		</header>
+		<br><br><br><br>
+		<ul class="navbar">
+		<li class="nav"> <a href="/public/dept.html" >Departments</a></li>
+		<li class="nav"><a href="safety tips" > Safety Tips</a></li>
+		<li class="nav"><a href="missing persons" > Missing Persons</a></li>
+		<li class="nav"><a href="lodge a complaint" > Lodge a complaint</a></li>
+		<li class="nav"><a href="contact us" > Contact us</a></li>
+		<li class="search"><input type="text" placeholder="Search.."></li>
+        </ul>
+        <h1 id="h1">REGISTRATION</h1>
+		<div>
+			<form id="myform" name="registration" method="post">
+				<table id="formtable">
+					<tr>
+					  <td><label name="name">Name:</label></td>
+					   <td><input id="name" type="text" name="name" placeholder="Enter your name.."></td>
+					</tr>
+				<!-- <br><br>-->
+					<tr>
+					<td><label>Phone Number:</label></td>
+					<td><input id="mob" type="text" name="phNo" placeholder="Enter phone number.."></td>
+			  		</tr>
+	  			<!-- <br><br>-->
+					<tr>
+					<td><label>Aadhar Number :</label></td>
+					<td><input id="aadhar" type="text" name="Aadhar" placeholder="Enter aadhar number.."></td>
+					</tr>
+				<!--<br><br>-->
+					<tr>
+					<td><label>Date of birth :</label></td>
+					 <td><input type="date" name="DOB" placeholder="dd/mm/yyyy" ></td>
+					</tr>
+				<!-- <br><br> -->
+					<tr>
+						<td><label>E-mail :</label></td>
+						 <td><input id="email" type="text" name="userEmail" placeholder="Enter email address.." ></td>
+					</tr>
+				<!-- <br><br> -->
+				<tr>
+					<!-- <br><br> -->
+    			<tr>
+				<td><label>Password:</label></td>
+			 	<td><input type="password" id="pwd" name="password" placeholder="Enter Password.." ></td>
+		 		</tr>
+	 			<!-- <br><br> -->
+		  		<tr>
+				<td><label>Confirm Password:</label></td>
+				<td><input type="password" id="cpass" name="password" placeholder="Confirm Password.." ></td>
+		 		</tr>
+	 			<!-- <br><br> -->
+	 			<td><label>Declaration:</label></td>
+				<td><input type="checkbox" id="chk" name="check">I hereby agree that above information given by me is true</td>
+				</tr>
+				<!-- <br><br> -->
+				<tr>
+				<td><input type="submit" value="submit" name="submit"></td>
+				  </tr>
+			  
+				</table>
+			</form>				
+			<footer class="box"></footer>
+    </body>
+</html>
