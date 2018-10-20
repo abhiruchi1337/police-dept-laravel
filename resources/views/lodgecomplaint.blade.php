@@ -25,7 +25,7 @@
         </ul>
 		<div>
             <h1>LODGE A COMPLAINT </h1>
-			<form id="myform" name="lodgecomplaint" method="post">
+			<form id="myform" name="lodgecomplaint" method="post" action="{{ action('UserController@lodgecomplaint') }}">
 				<table id="formtable">
                 <tr>
                     <td><label>Area :</label></td>
@@ -34,10 +34,12 @@
                 <!-- <br><br>-->
                 <tr>
                         <td><label>Complaint type :</label></td>
-                        <td><select name="status">
-                        <option value="complaint">complaint</option>
-                        <option value="minor crime">minor crime</option>
-                        <option value="feedback">feedback</option>
+                        <td><select name="type">
+                            @foreach($noncog as $n)
+                        <option value="{{$n->id}}">{{$n->name}}</option>
+                        <!-- <option value="minor crime">minor crime</option>
+                        <option value="feedback">feedback</option> -->
+                        @endforeach
                         </select>
                         </td>
                         </tr>
@@ -73,6 +75,7 @@
                 </tr>
                 <!-- <br><br> -->
                 <tr>
+                <input name="_token" type="hidden" value="{{ csrf_token() }}"/>
 				        <td><input type="submit" value="submit" name="submit"></td>
 				</tr>
                 </table>

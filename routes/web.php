@@ -19,9 +19,10 @@ Auth::routes();
 Route::get('/user', function(){
     return view('user_main');
 })->middleware('auth','user');
-Route::get('/newcomplaint', function(){
-    return view('lodgecomplaint');
-})->middleware('auth','user')->name('newcomplaint');
+Route::get('/newcomplaint', 'UserController@newcomplaint'
+)->middleware('auth','user')->name('newcomplaint');
+Route::post('/lodge', 'UserController@lodgecomplaint'
+)->middleware('auth','user');
  
 Route::get('/officer', function(){
     echo "Hello Officer";

@@ -23,7 +23,7 @@
 		<li class="search"><input type="text" placeholder="Search.."></li>
 		</ul> -->
 		@section('content')
-		<h1 style="color: #ffd700;">Hello {{Auth::user()->name}}!<h1>
+		<h1 style="color: #ffd700;">Hello, {{Auth::user()->name}}!<h1>
 		<h2>Welcome to Hawkins Police. Thank you for being a vigilant citizen. We appreciate your faith in us.</h2>
 		<div class="buttons" align="center"><a href="{{route('newcomplaint')}}" id='login'>Lodge a complaint</a>
 		<button>View my complaints</button></div>
