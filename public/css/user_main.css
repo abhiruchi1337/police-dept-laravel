@@ -67,8 +67,8 @@
 			  font-size: 25px;
 			  font-style: italic;
 			}
-			button{
-				position:relative;
+			.buttons{
+				position:absolute;
 				top: 30px;
 				background-color: #22335D;
 				border: none;

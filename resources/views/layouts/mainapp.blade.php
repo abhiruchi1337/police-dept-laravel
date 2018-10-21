@@ -12,14 +12,14 @@
 			<img class="logo" src="{{ asset('img/hawkins.png') }}" alt="Logo" height="120" width="100" >
 			<span class="title">Hawkins Police Department </span>
 				@guest
-                            <li class="nav-item">
+                            <!--<li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             <li class="nav-item">
                                 @if (Route::has('register'))
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 @endif
-                            </li>
+                            </li>-->
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -39,8 +39,8 @@
                                 </div>
                             </li>
                         @endguest
-            <!-- <a href="{{ route('login') }}" class='button' id='login'>Login</a>
-            <a href="{{ route('register') }}" class='button' id='register'>Register</a> -->
+             <a href="{{ route('login') }}" class='button' id='login'>Login</a>
+            <a href="{{ route('register') }}" class='button' id='register'>Register</a> 
 			<!-- <button class="button" id="register">Register</button>
 			<button class="button" id="login">Login</button> -->
 			<br><br>
@@ -52,10 +52,51 @@
 		<li class="nav"> <a href="{{url('departments')}}" >Departments</a></li>
 		<li class="nav"><a href="{{url('safety')}}" > Safety Tips</a></li>
 		<li class="nav"><a href="{{url('missing')}}" > Missing Persons</a></li>
-		<li class="nav"><a href="#" > Lodge a complaint</a></li>
+		<li class="nav"><a href="{{ route('login') }}" > Lodge a complaint</a></li>
 		<li class="nav"><a href="{{url('contact')}}" > Contact us</a></li>
-		<li class="search"><input type="text" placeholder="Search.."></li>
         </ul>
+		<form class="search2">
+			<input type="text" size="20" onkeyup="showResult(this.value)">
+			<div id="livesearch"></div>
+		</form>
+		<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000);    
+}
+
+function showResult(str) {
+  if (str.length==0) { 
+    document.getElementById("livesearch").innerHTML="";
+    document.getElementById("livesearch").style.border="0px";
+    return;
+  }
+  if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else {  // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("livesearch").innerHTML=this.responseText;
+      document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+    }
+  }
+  xmlhttp.open("GET","livesearch.php?q="+str,true);
+  xmlhttp.send();
+}
+</script>
         <main>
             @yield('content')
         </main>
@@ -68,8 +109,6 @@
 		committed to maintaining public order, preventing and detecting crime, maintaining and promoting communal
 		harmony, ensuring a smooth flow of traffic, and taking strong action against terrorism, organized crime, 
 		anti-social / illicit activities / elements.</p> -->
-		<footer>
-			<h4>Contact no: 022-22654451, 9956788473 &emsp;&emsp;&emsp;&emsp; Contact email-id: queries@hawkins.com</h4>
-		</footer>
+		
 	</body>
 </html>

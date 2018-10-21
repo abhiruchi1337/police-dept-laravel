@@ -17,6 +17,9 @@ Route::get('/', function () {
 Route::get('/departments', function () {
     return view('publichome');
 });
+Route::get('/safety', function () {
+    return view('safety');
+});
 Route::get('/missing', function () {
     return view('missing');
 });

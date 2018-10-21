@@ -12,6 +12,7 @@
 				padding: 10px;
 				overflow: hidden;
 				background-color: #22335D;
+				display: inline-block;
 			}
 			li.nav {
 				float: left;
@@ -75,6 +76,19 @@
 			.search{
 				position:relative;
 				float:right;
+			}
+			.search2{
+				float: right;
+				width: 24%;
+				margin:0;
+				padding:0;
+				margin-bottom: 0px;
+				border:0;
+				list-style-type: none;
+				padding: 10px;
+				overflow: hidden;
+				background-color: #22335D;
+			
 			}
 			.maincard{
 				display:block;
