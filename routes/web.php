@@ -39,8 +39,8 @@ Route::group(['prefix' => 'officer', 'middleware' => ['auth','officer']],  funct
     
     Route::get('/', 'OfficerController@index');
     Route::get('/cases', 'OfficerController@viewCases');
-    Route::get('/cases/{cid}', ['uses' =>'OfficerController@showCase', 'as'=>'singleCase']);
-    Route::match(['put', 'patch'], '/cases/{cid}/update',['uses' =>'OfficerController@updatecase', 'as'=>'updateCase']);
+    Route::get('/cases/{cid}', ['uses' =>'OfficerController@showCase', 'as'=>'singleOfficerCase']);
+    Route::match(['put', 'patch'], '/cases/{cid}/update',['uses' =>'OfficerController@updatecase', 'as'=>'updateOfficerCase']);
     
     Route::get('/newcase', 'OfficerController@newCase');
     Route::post('/lodge', 'OfficerController@lodgecomplaint');

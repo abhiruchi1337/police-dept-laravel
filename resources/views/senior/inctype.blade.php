@@ -27,7 +27,7 @@
         </ul>
 		<h1 class="dash">POLICE DASHBOARD</h1>
 		<div>
-			<form id="myform" name="incidenttype" method="post" action="{{route('updateOfficerCase',['cid' => $complaint->i_id])}}">
+			<form id="myform" name="incidenttype" method="post" action="{{route('updateCase',['cid' => $complaint->i_id])}}">
 			{!! method_field('patch') !!}
 				<table id="formtable">
 					<tr><td><label>Case ID :{{$complaint->i_id}}</label></td></tr>

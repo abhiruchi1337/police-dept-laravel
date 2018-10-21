@@ -19,11 +19,11 @@ class SeniorController extends Controller
     }
     public function viewCases(Request $request){
         $complaints=Incident::paginate(10);
-        return view('officer.jr_police_all_cases')->with('cmp',$complaints);
+        return view('senior.jr_police_all_cases')->with('cmp',$complaints);
     }
     public function showCase($cid){
         $complaint=Incident::where('i_id','=',$cid)->first();
-        return view('officer.inctype')->with('complaint',$complaint);
+        return view('senior.inctype')->with('complaint',$complaint);
     }
     public function newCase(){
         
@@ -105,9 +105,9 @@ class SeniorController extends Controller
             $suspect->p_name=$request->input('suspectname');
             $suspect->save();
         }
-        if($request->input('o_name')!=''){
+        if($request->input('officer')!=''){
             $assign=new OfficerIncident();
-            $assign->o_id=$request->input('o_id');
+            $assign->o_id=$request->input('officer');
             $assign->i_id=$cid;
             $assign->save();
         }
