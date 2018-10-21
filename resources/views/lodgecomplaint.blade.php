@@ -29,7 +29,13 @@
 				<table id="formtable">
                 <tr>
                     <td><label>Area :</label></td>
-                    <td><input id="area" type="text" name="area" placeholder="Enter area.."></td>
+                    <td><select name="area">
+                            @foreach($areas as $n)
+                        <option value="{{$n->a_id}}">{{$n->a_name}}</option>
+                        <!-- <option value="minor crime">minor crime</option>
+                        <option value="feedback">feedback</option> -->
+                        @endforeach
+                        </select></td>
                 </tr>
                 <!-- <br><br>-->
                 <tr>

@@ -26,7 +26,7 @@
 		<h1 style="color: #ffd700;">Hello, {{Auth::user()->name}}!<h1>
 		<h2>Welcome to Hawkins Police. Thank you for being a vigilant citizen. We appreciate your faith in us.</h2>
 		<div class="buttons" align="center"><a href="{{route('newcomplaint')}}" id='login'>Lodge a complaint</a>
-		<button>View my complaints</button></div>
+		<div class="buttons" align="center"><a href="{{url('user/complaints')}}" id='login'>View my complaints</a>
 		<h2>About Us</h2>
 		<p>We shall ensure the Rule of Law, enforce the law of the land impartially and firmly without fear or favour, 
 		and strive to create a fear free environment that is conducive to growth and development. We will remain
