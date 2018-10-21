@@ -66,6 +66,6 @@
 			<tr><td>Address</td>
 			<td>14, LBS road, Andheri, Mumbai.</td></tr>
 		</table><br><br>
-		<button id="lodgeacomplaint"><a href="{{route('login')}}"></a>Lodge a complaint?</button>
+		<a id="lodgeacomplaint" href="{{route('login')}}" role="button">Lodge a complaint?</a>
 	</body>
 </html>

@@ -36,10 +36,10 @@ use App\Area;?>
 				@foreach($cmp as $c)
 				<tr>
 					<td class="case_id"><a href="{{route('singleComplaint',['cid' => $c->i_id])}}">{{$c->i_id}}</a></td>
-					<td><input type='text' class="textbox" value='{{$c->i_date}}'/></td>
-					<td><input type='text' class="textbox" value='{{$c->i_desc}}'/></td>
-					<td><input type='text' class="textbox" value='{{Area::where("a_id","=",$c->a_id)->first()->a_name}}'/></td>
-					<td><input type='text' class="textbox" value='{{$c->status}}'/></td>
+					<td><input type='text' class="textbox" disabled="disabled" value='{{$c->i_date}}'/></td>
+					<td><input type='text' class="textbox" disabled="disabled" value='{{$c->i_desc}}'/></td>
+					<td><input type='text' class="textbox" disabled="disabled" value='{{Area::where("a_id","=",$c->a_id)->first()->a_name}}'/></td>
+					<td><input type='text' class="textbox" disabled="disabled" value='{{$c->status}}'/></td>
 				</tr>
 
 				@endforeach

@@ -94,7 +94,7 @@ background-color: #22335D;
 	padding: 2px 2px;
 }
 .sample_images{
-	display: block;
+	display: inine-block;
 	margin-left: auto;
 	margin-right: auto;
 	width:1200px;
