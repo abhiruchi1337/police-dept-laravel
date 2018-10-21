@@ -84,33 +84,19 @@ footer{
     background-color:#22335D;	
     margin: 20px 0px 20px 0px ;
 }
-a:link,a:visited{
-	text-decoration: none;
-	color:orange;
-	font-style:italic;
-	font-size:25px;
+
+p{
+    font-style:italic;
+    font-size:18px;
 }
-a:hover{
-	color:#22335D;
+h3,h2{
+    font-style:italic;
 }
-table, th, td {
-   border: 1px solid black;
-   margin-left: auto;
-   margin-right:auto;
-   height:50px;
-   width:300px;
-   text-align:center;
+h2{
+    color:orange;
 }
-th,h1{
-	color:#22335D;
-	font-style:italic;
-	font-size:25px;
-}
-ul{
-    list-style-type: square;
-}
-body{
-	font-style: italic;
+#livesearch{
+    height:2px;
 }
 #login, #register{
     position:relative;
@@ -126,8 +112,4 @@ body{
         font-size: 16px;
         margin: 0px 5px;
         cursor: pointer;
-    }
-
-    #livesearch{
-        height:2px;
     }

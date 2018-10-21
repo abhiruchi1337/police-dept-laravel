@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('publichome');
 });
 Route::get('/departments', function () {
-    return view('publichome');
+    return view('departments');
 });
 Route::get('/safety', function () {
     return view('safety');

@@ -1,12 +1,43 @@
+<!DOCTYPE html>
 <html>
 <head>
 <title>Safety Tips</title>
-<link rel="stylesheet" type="text/css" href="{{asset(safety.css)}}">
+<link rel="stylesheet" type="text/css" href="{{asset('css/safety.css')}}">
 </head>
 <body>
 <header>
-		<img class="logo" src="hawkins.png" alt="Logo" height="120" width="100">
+		<img class="logo" src="{{asset('img/hawkins.png')}}" alt="Logo" height="120" width="100">
 		<span class="title">Hawkins Police Department </span>
+		@guest
+                            <!--<li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                            </li>
+                            <li class="nav-item">
+                                @if (Route::has('register'))
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                @endif
+                            </li>-->
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+             <a href="{{ route('login') }}" class='button' id='login'>Login</a>
+            <a href="{{ route('register') }}" class='button' id='register'>Register</a>
 		<br><br>
 		<span class="slogan">Dedication against crime.</span>
 </header>
@@ -17,10 +48,10 @@
 		<li class="nav"><a href="{{url('missing')}}" > Missing Persons</a></li>
 		<li class="nav"><a href="{{ route('login') }}" > Lodge a complaint</a></li>
 		<li class="nav"><a href="{{url('contact')}}" > Contact us</a></li>
-        </ul>
+	</ul>
 		<form class="search2">
 			<input type="text" size="20" onkeyup="showResult(this.value)">
-			<div id="livesearch"></div>
+			 <div id="livesearch"></div> 
 		</form>
 	<table>
 		<th>SAFETY TIPS</th>
