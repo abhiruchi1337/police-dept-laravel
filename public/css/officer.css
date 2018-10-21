@@ -1,0 +1,145 @@
+            header { 
+				display: inline;
+				margin:0;
+				border:0;
+			}
+			ul.navbar{
+				margin:0;
+				padding:0;
+				margin-bottom: 0px;
+				border:0;
+				list-style-type: none;
+				padding: 10px;
+				overflow: hidden;
+				background-color: #22335D;
+			}
+			li.nav {
+				float: left;
+				position: relative;
+			}
+			li.nav a,input {
+				display: block;
+				color: white;
+				font-size: 20px;
+				text-align: center;
+				padding: 3px 40px;
+				text-decoration: none;    
+			}
+			input{
+				color: black;
+				text-align: left;
+				padding:0;
+				width:300px;
+			}
+			::placeholder {
+				color: black;
+				opacity: 1; 
+				text-align:left;
+				font-size:15px;
+				font-style:italic;
+			}
+			li.nav a:hover {
+				background-color: #00bfff;
+				color:black;
+				padding: 3px 40px;
+			}
+			img.logo {
+			  float: left;
+			  margin:0;
+			}
+			span.title {
+			  position: relative;
+			  color:#22335D;
+			  font-size:40px;
+			  top:15px;
+			}
+			span.slogan{
+			  position: relative;
+			  color: orange;
+			  font-size: 25px;
+			  font-style: italic;
+            }
+			.search{
+				position:relative;
+                float:right;
+			}
+			footer{
+				width: auto;
+				height: 10px;
+				background-color:#22335D;	
+				margin: 20px 0px 20px 0px ;
+			}
+			td {
+				padding-top: 0.5em;
+				padding-bottom: 0.5em;
+			}
+            h2{
+                color:orange;
+            }
+			input[type=submit] {
+				background-color:#22335D;
+				color: white;
+				padding: 15px 15px;
+				width:80%;
+				margin: 8px 0;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+				font-size:20px;
+				font-style:italic;
+				text-align: center;
+			}
+			input[type=submit]:hover {
+				background-color:#00bfff;
+			}
+			#formtable{
+				text-align: left;
+				margin:auto;
+			}
+			div {
+    		border-radius: 5px;
+   			background-color: #f2f2f2;
+    		padding: 20px;
+            }
+            
+			h1:not(.dash){
+				text-align: center;
+				color:#22335D;
+			}
+			input[type=text]:not(#search),input[type=date],select{
+				padding: 12px;
+				border: 1px solid #ccc;
+				resize: vertical;
+                display:inline-block;
+                border-radius:4px;
+            }
+			label {
+				text-align: center;
+				font-style:italic;
+				font-size:20px;
+				padding: 12px 12px 12px 0;
+				/*display: inline-block;*/
+				display: ruby-text-container;
+			}
+
+			#login, #register{
+				position:relative;
+				float:right;
+				top: 30px;
+				background-color: #22335D;
+					border: none;
+					color: white;
+					padding: 10px 30px;
+					text-align: center;
+					text-decoration: none;
+					display: inline;
+					font-size: 16px;
+					margin: 0px 5px;
+					cursor: pointer;
+				}
+
+            img.pic{
+                float:right;
+                width:150px;
+                height:auto;
+            }

@@ -48,14 +48,34 @@ Route::group(['prefix' => 'officer', 'middleware' => ['auth','officer']],  funct
 // Route::get('/user', function(){
 //     return view('user_main');
 // })->middleware('auth','user');
-
+Route::group(['prefix' => 'senior', 'middleware' => ['auth','senior']],  function () {
+    
+    Route::get('/', 'SeniorController@index');
+    Route::get('/cases', 'SeniorController@viewCases');
+    Route::get('/cases/{cid}', ['uses' =>'SeniorController@showCase', 'as'=>'singleCase']);
+    Route::match(['put', 'patch'], '/cases/{cid}/update',['uses' =>'SeniorController@updatecase', 'as'=>'updateCase']);
+    
+    Route::get('/newcase', 'SeniorController@newCase');
+    Route::post('/lodge', 'SeniorController@lodgecomplaint');
+    Route::get('/newofficer', 'SeniorController@newOfficer');
+    Route::post('/registerofficer', 'SeniorController@registerOfficer');
+    Route::get('/officers', 'SeniorController@viewOfficers');
+    Route::get('/officers/{oid}', ['uses' =>'SeniorController@showOfficer', 'as'=>'singleOfficer']);
+    Route::match(['put', 'patch'], '/officers/{oid}/update',['uses' =>'SeniorController@updateOfficer', 'as'=>'updateOfficer']);
+    // Route::get('/cases', 'OfficerController@viewCases');
+    // Route::get('/cases/{cid}', ['uses' =>'OfficerController@showCase', 'as'=>'singleCase']);
+    // Route::match(['put', 'patch'], '/cases/{cid}/update',['uses' =>'OfficerController@updatecase', 'as'=>'updateCase']);
+    
+    // Route::get('/newcase', 'OfficerController@newCase');
+    // Route::post('/lodge', 'OfficerController@lodgecomplaint');
+});
 
  
 // Route::get('/officer', function(){
 //     echo "Hello Officer";
 // })->middleware('auth','officer');
  
-Route::get('/senior', function(){
-    echo "Hello Senior Officer";
-})->middleware('auth','senior');
+// Route::get('/senior', function(){
+//     echo "Hello Senior Officer";
+// })->middleware('auth','senior');
 Route::get('/home', 'HomeController@index')->name('home');
