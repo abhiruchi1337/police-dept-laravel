@@ -42,7 +42,7 @@ use App\OfficerIncident;
 			@if(isset($cmp))
 				@foreach($cmp as $c)
 				<tr>
-					<td class="case_id"><a href="{{route('singleComplaint',['cid' => $c->i_id])}}">{{$c->i_id}}</a></td>
+					<td class="case_id"><a href="{{route('singleCase',['cid' => $c->i_id])}}">{{$c->i_id}}</a></td>
 					<td><input type='text' class="textbox" value='{{$c->i_type}}'/></td>
 					<td><input type='text' class="textbox" value='{{$c->status}}'/></td>
 					<td><input type='text' class="textbox" value='{{$c->i_date}}'/></td>

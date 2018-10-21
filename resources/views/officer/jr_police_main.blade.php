@@ -6,7 +6,7 @@
 			<option value="your cases">Your cases</option>
 			<option value="all cases">All cases</option>
 		</select>
-		<button class="register">Register a case</button>
+		<a class="register" href='{{url("officer/newcase")}}'>Register a case</a>
 		<button class="view">View officers</button>
 		<br>
 		<div class="new_pending">
