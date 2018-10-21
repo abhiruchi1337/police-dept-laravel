@@ -180,9 +180,12 @@
 					top:50%;
 					left:35%;
 				}
-			a:visited:not(.icon){
+			.register{
 				color:white;
 			}
 			a:link{
 				text-decoration:none;
+			}
+			#livesearch{
+				height:2px;
 			}

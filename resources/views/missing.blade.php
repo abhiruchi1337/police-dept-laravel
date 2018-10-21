@@ -19,6 +19,8 @@
 							<a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
 					@endif
 			</li>-->
+			<a href="{{ route('login') }}" class='button' id='login'>Login</a>
+			<a href="{{ route('register') }}" class='button' id='register'>Register</a>
 	@else
 			<li class="nav-item dropdown">
 					<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -38,13 +40,11 @@
 					</div>
 			</li>
 	@endguest
-<a href="{{ route('login') }}" class='button' id='login'>Login</a>
-<a href="{{ route('register') }}" class='button' id='register'>Register</a>
 			<br><br>
 			<span class="slogan">Dedication against crime.</span>
 			
 		</header>
-		<br><br><br><BR>
+		<br><br><br><br>
 		<ul class="navbar">
 		<li class="nav"> <a href="{{url('departments')}}" >Departments</a></li>
 		<li class="nav"><a href="{{url('safety')}}" > Safety Tips</a></li>

@@ -10,8 +10,37 @@
 			<img class="logo" src="{{asset('img/hawkins.png')}}" alt="Logo" height="120" width="100">
 			<span class="title">Hawkins Police Department </span>
 			<br><br>
+			@guest
+			<!--<li class="nav-item">
+				<a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+			</li>
+			<li class="nav-item">
+				@if (Route::has('register'))
+					<a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+				@endif
+			</li>-->
+			<a href="{{ route('login') }}" class='button' id='login'>Login</a>
+			<a href="{{ route('register') }}" class='button' id='register'>Register</a>
+		@else
+			<li class="nav-item dropdown">
+				<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+					{{ Auth::user()->name }} <span class="caret"></span>
+				</a>
+
+				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+					<a class="dropdown-item" href="{{ route('logout') }}"
+					   onclick="event.preventDefault();
+									 document.getElementById('logout-form').submit();">
+						{{ __('Logout') }}
+					</a>
+
+					<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+						@csrf
+					</form>
+				</div>
+			</li>
+		@endguest
 			<span class="slogan">Dedication against crime.</span>
-			<div class="login_icon"><a class="icon" href="#"><i class="fa fa-user-circle"></i></a> </div>
 		</header>
 		<br><br><br><br>
 		<ul class="navbar">
@@ -25,8 +54,8 @@
 		<h1 id="police_dashboard">POLICE DASHBOARD</h1><hr>
 		<br><br>
 		<div class="policebutton"><a class="register" href='{{url("senior/newcase")}}'>Register a case</a></div>
-		<div class="policebutton"><a href='{{url("senior/officers")}}'>View officers</a></div>
-		<div class="policebutton"><a href='{{url("senior/newofficer")}}'>New officers</a></div>
+		<div class="policebutton"><a class="register" href='{{url("senior/officers")}}'>View officers</a></div>
+		<div class="policebutton"><a class="register" href='{{url("senior/newofficer")}}'>New officers</a></div>
 		<br><br>
 		<div class="pending_cases"><h2>Pending Cases</h2>
 		
