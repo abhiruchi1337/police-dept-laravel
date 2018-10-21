@@ -6,6 +6,7 @@ use App\Person;
 use Auth;
 use App\IncidentType;
 use App\OfficerIncident;
+use App\PersonIncident;
 use App\Area;
 use Illuminate\Http\Request;
 
@@ -39,6 +40,41 @@ class OfficerController extends Controller
         $complaint->i_type=intval($request->input('type'));
         $complaint->lodged_by=Auth::user()->id;
         $complaint->save();
+        // return $complaint->id;
+        if($request->input('vname')!=''||($request->input('suspectname')!='')){
+            if($request->input('vname')!=''){
+                $victim=new Person();
+                $v=Person::where('aadhar',$request->input('aadhar'))->first();
+                if (!isset($v)){
+                    $victim->p_name=$request->input('vname');
+                $victim->aadhar=$request->input('aadhar');
+                $victim->address=$request->input('address');
+                $victim->save();
+                $vinc=new PersonIncident();
+                $vinc->i_id=$complaint->i_id;
+                $vinc->p_id=$victim->p_id;
+                $vinc->save();
+                }
+                else{
+                    $vinc=new PersonIncident();
+                $vinc->i_id=$complaint->i_id;
+                $vinc->p_id=$v->p_id;
+                $vinc->save();
+                }
+                
+                
+            }
+            if($request->input('suspectname')!=''){
+                $suspect=new Person();
+                $suspect->p_name=$request->input('suspectname');
+                $suspect->save();
+                $vinc=new PersonIncident();
+                $vinc->i_id=$complaint->i_id;
+                $vinc->p_id=$suspect->p_id;
+                $vinc->save();
+            }
+
+        }
         return redirect('/officer');
     }
     public function updatecase(Request $request, $cid){

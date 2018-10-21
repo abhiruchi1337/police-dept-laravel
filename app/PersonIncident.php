@@ -4,9 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Person extends Model
+class PersonIncident extends Model
 {
-    protected $table='person';
-    protected $primaryKey='p_id';
+    protected $table='person_in_incident';
     public $timestamps=false;
 }

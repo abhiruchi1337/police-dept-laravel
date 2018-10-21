@@ -67,7 +67,7 @@
                 <!-- <br><br> -->
                 <tr>
                     <td><label>Aadhar number :</label></td>
-                    <td><input id="aadhar" type="text" name="Aadhar" placeholder="Enter aadhar no.."></td>
+                    <td><input id="aadhar" type="text" name="aadhar" placeholder="Enter aadhar no.."></td>
                 </tr>
                 <!--<br><br>-->
                 <tr>
