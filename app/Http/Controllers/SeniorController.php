@@ -29,7 +29,7 @@ class SeniorController extends Controller
         
             $ctype=IncidentType::all();
             $areas=Area::all();
-            return view('lodgecomplaint')->with('ctype',$ctype)->with('areas',$areas);
+            return view('senior.lodgecomplaint')->with('ctype',$ctype)->with('areas',$areas);
         
     }
     public function lodgecomplaint(Request $request){
@@ -41,7 +41,9 @@ class SeniorController extends Controller
         $complaint->a_id=intval($request->input('area'));
         $complaint->i_type=intval($request->input('type'));
         $complaint->lodged_by=Auth::user()->id;
+        
         $complaint->save();
+        echo 'complaint saved';
         // return $complaint->id;
         if($request->input('vname')!=''||($request->input('suspectname')!='')){
             if($request->input('vname')!=''){
@@ -77,6 +79,7 @@ class SeniorController extends Controller
             }
 
         }
+        // return 'fuckall';
         return redirect('/senior');
     }
     public function updatecase(Request $request, $cid){

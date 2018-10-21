@@ -27,7 +27,7 @@ class OfficerController extends Controller
         
             $ctype=IncidentType::all();
             $areas=Area::all();
-            return view('lodgecomplaint')->with('ctype',$ctype)->with('areas',$areas);
+            return view('officer.lodgecomplaint')->with('ctype',$ctype)->with('areas',$areas);
         
     }
     public function lodgecomplaint(Request $request){

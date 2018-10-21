@@ -25,7 +25,7 @@
         </ul>
 		<div>
             <h1>LODGE A COMPLAINT </h1>
-			<form id="myform" name="lodgecomplaint" method="post" action="{{ action('UserController@lodgecomplaint') }}">
+			<form id="myform" name="lodgecomplaint" method="post" action="{{ action('OfficerController@lodgecomplaint') }}">
 				<table id="formtable">
                 <tr>
                     <td><label>Area :</label></td>

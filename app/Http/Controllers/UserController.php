@@ -13,7 +13,7 @@ class UserController extends Controller
     public function newcomplaint(Request $request){
         $noncog=IncidentType::where('id','>=',3)->get();
         $areas=Area::all();
-        return view('lodgecomplaint')->with('noncog',$noncog)->with('areas',$areas);
+        return view('lodgecomplaint')->with('ctype',$noncog)->with('areas',$areas);
     }
     public function lodgecomplaint(Request $request){
         // return $request;
