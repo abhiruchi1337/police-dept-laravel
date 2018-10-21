@@ -10,7 +10,7 @@ use App\Person;
 	</head>
 	<body>
 		<header>
-			<img class="logo" src="hawkins.png" alt="Logo" height="120" width="100">
+			<img class="logo" src="{{asset('img/hawkins.png')}}" alt="Logo" height="120" width="100">
 			<span class="title">Hawkins Police Department </span>
 			<br><br>
 			<span class="slogan">Dedication against crime.</span>

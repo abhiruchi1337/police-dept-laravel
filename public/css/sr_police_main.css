@@ -165,4 +165,24 @@
 			div.temp{
 				margin: 20px;
 			}
-		
+			.policebutton{
+				position:relative;
+				background-color: #22335D;
+					border: none;
+					color: white;
+					padding: 10px 30px;
+					text-align: center;
+					text-decoration: none;
+					display: inline;
+					font-size: 16px;
+					margin: 0px 5px;
+					cursor: pointer;
+					top:50%;
+					left:35%;
+				}
+			a:visited:not(.icon){
+				color:white;
+			}
+			a:link{
+				text-decoration:none;
+			}

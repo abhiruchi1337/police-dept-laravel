@@ -7,7 +7,7 @@
 	</head>
 	<body>
 		<header>
-			<img class="logo" src="hawkins.png" alt="Logo" height="120" width="100">
+			<img class="logo" src="{{asset('img/hawkins.png')}}" alt="Logo" height="120" width="100">
 			<span class="title">Hawkins Police Department </span>
 			<button class="button" id="register">Register</button>
 			<button class="button" id="login">Login</button>
