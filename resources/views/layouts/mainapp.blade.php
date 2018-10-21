@@ -20,6 +20,8 @@
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 @endif
                             </li>-->
+                            <a href="{{ route('login') }}" class='button' id='login'>Login</a>
+                            <a href="{{ route('register') }}" class='button' id='register'>Register</a>
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -39,8 +41,7 @@
                                 </div>
                             </li>
                         @endguest
-             <a href="{{ route('login') }}" class='button' id='login'>Login</a>
-            <a href="{{ route('register') }}" class='button' id='register'>Register</a> 
+             
 			<!-- <button class="button" id="register">Register</button>
 			<button class="button" id="login">Login</button> -->
 			<br><br>
@@ -56,7 +57,7 @@
 		<li class="nav"><a href="{{url('contact')}}" > Contact us</a></li>
         </ul>
 		<form class="search2">
-			<input type="text" size="20" onkeyup="showResult(this.value)">
+			<input type="text" size="20" onkeyup="showResult(this.value)" placeholder="Search..">
 			<div id="livesearch"></div>
 		</form>
 		<script>

@@ -3,7 +3,7 @@
 		<title>User_main</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="{{asset('css/home.css')}}">
+		<link rel="stylesheet" type="text/css" href="{{asset('css/user_main.css')}}">
 	</head>
 <!-- 	
 		<header>
@@ -25,8 +25,9 @@
 		@section('content')
 		<h1 style="color: #ffd700;">Hello, {{Auth::user()->name}}!<h1>
 		<h2>Welcome to Hawkins Police. Thank you for being a vigilant citizen. We appreciate your faith in us.</h2>
-		<div class="buttons" align='center'><a href="{{route('newcomplaint')}}" class='centerbutton'>Lodge a complaint</a>
-		<div class="buttons" align="center"><a href="{{url('user/complaints')}}" class='centerbutton'>View my complaints</a>
+		<div class="buttons" align='center'>
+			<a class="buttons2" href="{{route('newcomplaint')}}" role="button">Lodge a complaint</a>
+			<a class="buttons2" href="{{url('user/complaints')}}" role="button">View my complaints</a></div>
 		<h2>About Us</h2>
 		<p>We shall ensure the Rule of Law, enforce the law of the land impartially and firmly without fear or favour, 
 		and strive to create a fear free environment that is conducive to growth and development. We will remain

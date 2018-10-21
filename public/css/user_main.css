@@ -68,22 +68,35 @@
 			  font-style: italic;
 			}
 			.buttons{
-				position:absolute;
-				top: 30px;
+				position: relative;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.buttons2{
 				background-color: #22335D;
 				border: none;
 				color: white;
 				padding: 10px 30px;
 				text-align: center;
 				text-decoration: none;
-				display: inline;
+				display: inline-block;
 				font-size: 16px;
-				margin: 20px 20px;
 				cursor: pointer;
+				margin-left: 20px;
+				margin-right: 20px;
 			}
+			a:visited{
+				text-decoration: none;
+			}
+			a:link{
+				text-decoration: none;
+				color: white;
+			}
+			
 			.search{
 				position:relative;
 				float:right;
+				height: 20px;
 			}
 
 			footer{

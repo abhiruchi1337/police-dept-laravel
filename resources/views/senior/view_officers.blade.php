@@ -43,10 +43,10 @@ use App\Person;
 			?>
 			<tr>
 				<td class="case_id"><a href="{{route('singleOfficer',['oid' => $o->o_id])}}">{{$o->o_id}}</a></td>
-				<td><input type='text' class="textbox" value="{{$operson->p_name}}"/></td>
-				<td><input type='text' class="textbox" value="{{$o->d_id}}"/></td>
-				<td><input type='text' class="textbox" value="{{$o->rank}}"/></td>
-				<td><input type='text' class="textbox" value="{{$operson->dob}}"/></td>
+				<td><input type='text' disabled="disabled" class="textbox" value="{{$operson->p_name}}"/></td>
+				<td><input type='text' disabled="disabled" class="textbox" value="{{$o->d_id}}"/></td>
+				<td><input type='text' disabled="disabled" class="textbox" value="{{$o->rank}}"/></td>
+				<td><input type='text' disabled="disabled" class="textbox" value="{{$operson->dob}}"/></td>
 			</tr>
 
 			@endforeach

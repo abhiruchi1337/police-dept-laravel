@@ -27,7 +27,6 @@
         </ul>
         <h1 class="dash">POLICE DASHBOARD</h1>
 		<div>
-            <img class="pic" src="" alt="photo"/>
 			<form id="officerform" name="officerdetail" method="post" action="{{route('updateOfficer',['oid' => $officer->o_id])}}">
 			{!! method_field('patch') !!}
 				<table id="formtable">
