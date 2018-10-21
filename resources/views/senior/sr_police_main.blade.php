@@ -11,7 +11,7 @@
 			<span class="title">Hawkins Police Department </span>
 			<br><br>
 			<span class="slogan">Dedication against crime.</span>
-			<div class="login_icon"><a class="icon"href="#"><i class="fa fa-user-circle"></i></a> </div>
+			<div class="login_icon"><a class="icon" href="#"><i class="fa fa-user-circle"></i></a> </div>
 		</header>
 		<br><br><br><br>
 		<ul class="navbar">

@@ -9,10 +9,9 @@
 		<header>
 			<img class="logo" src="{{asset('img/hawkins.png')}}" alt="Logo" height="120" width="100">
 			<span class="title">Hawkins Police Department </span>
-			<button class="button" id="register">Register</button>
-			<button class="button" id="login">Login</button>
 			<br><br>
 			<span class="slogan">Dedication against crime.</span>
+			<div class="login_icon"><a class="icon" href="#"><i class="fa fa-user-circle"></i></a></div>
 		</header>
 		<br><br><br><br>
 		<ul class="navbar">
@@ -32,7 +31,7 @@
 				<input name="_token" type="hidden" value="{{ csrf_token() }}"/>
 					<tr>
 					  <td><label name="name">Name:</label></td>
-					   <td><input id="name" type="text" name="name" placeholder="Enter your name.."></td>
+					   <td><input id="name" type="text" name="name" placeholder="Enter name.."></td>
 					</tr>
 				<!-- <br><br>-->
 					<tr>
@@ -47,7 +46,7 @@
                 <!--<br><br>-->
                     <tr>
 					<td><label>Salary :</label></td>
-					<td><input id="salary" type="text" name="salary" placeholder="Enter department.."></td>
+					<td><input id="salary" type="text" name="salary" placeholder="Enter salary.."></td>
 					</tr>
 				<!--<br><br>-->
 					<tr>
@@ -59,7 +58,7 @@
 				<!-- <br><br> -->
 				    <tr>
 				        <td><label>Address :</label></td>    
-                        <td><textarea id="addr" rows="4" cols="40" name="addr" placeholder="Enter your address.."></textarea></td>
+                        <td><textarea id="addr" rows="4" cols="40" name="addr" placeholder="Enter address.."></textarea></td>
 					</tr>
 				
                         <div class="form-group row">

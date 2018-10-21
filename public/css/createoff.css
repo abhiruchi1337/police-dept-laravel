@@ -109,7 +109,6 @@
 			input[type=text]:not(#search),input[type=date],select{
 				padding: 12px;
 				border: 1px solid #ccc;
-				resize: vertical;
                 display:inline-block;
                 border-radius:4px;
             }
@@ -147,4 +146,18 @@
 				}
 			hr{
 					border-width:4px;
+				}
+				.login_icon a{
+					float: right;
+					width: 10%;
+					text-align: center;
+					transition: all 0.3s ease;
+					color: #22335D;
+					font-size: 36px;
+				}
+				a:visited:not(.icon){
+					color:white;
+				}
+				a:link{
+					text-decoration:none;
 				}
