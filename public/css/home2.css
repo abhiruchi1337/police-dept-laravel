@@ -57,7 +57,7 @@ header {
 			  font-size: 25px;
 			  font-style: italic;
 			}
-			.button{
+			#login, #register{
 			position:relative;
 			float:right;
 			top: 30px;
@@ -67,25 +67,11 @@ header {
 				padding: 10px 30px;
 				text-align: center;
 				text-decoration: none;
+				display: inline;
 				font-size: 16px;
 				margin: 0px 5px;
 				cursor: pointer;
 			}
-			.centerbutton{
-				position:relative;
-				background-color: #22335D;
-					border: none;
-					color: white;
-					padding: 10px 30px;
-					text-align: center;
-					text-decoration: none;
-					display: inline;
-					font-size: 16px;
-					margin: 0px 5px;
-					cursor: pointer;
-					margin-left:auto;
-					margin-right:auto;
-				}
 			.search{
 				position:relative;
 				float:right;

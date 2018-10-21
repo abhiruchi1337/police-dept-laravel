@@ -14,6 +14,15 @@
 Route::get('/', function () {
     return view('publichome');
 });
+Route::get('/departments', function () {
+    return view('publichome');
+});
+Route::get('/missing', function () {
+    return view('missing');
+});
+Route::get('/contact', function () {
+    return view('contact_us');
+});
 // Route::get('/data', 'MyController@index');
 Auth::routes();
 Route::group(['prefix' => 'user', 'middleware' => ['auth','user']],  function () {
@@ -25,15 +34,22 @@ Route::group(['prefix' => 'user', 'middleware' => ['auth','user']],  function ()
     Route::get('/complaints', 'UserController@viewcomplaints');
     Route::get('/complaints/{cid}', ['uses' =>'UserController@showComplaint', 'as'=>'singleComplaint']);
 });
+
+Route::group(['prefix' => 'officer', 'middleware' => ['auth','officer']],  function () {
+    
+    Route::get('/', 'OfficerController@index');
+    Route::get('/cases', 'OfficerController@viewCases');
+    
+});
 // Route::get('/user', function(){
 //     return view('user_main');
 // })->middleware('auth','user');
 
 
  
-Route::get('/officer', function(){
-    echo "Hello Officer";
-})->middleware('auth','officer');
+// Route::get('/officer', function(){
+//     echo "Hello Officer";
+// })->middleware('auth','officer');
  
 Route::get('/senior', function(){
     echo "Hello Senior Officer";
