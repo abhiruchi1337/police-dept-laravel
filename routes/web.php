@@ -14,15 +14,22 @@
 Route::get('/', function () {
     return view('publichome');
 });
-Route::get('/data', 'MyController@index');
+// Route::get('/data', 'MyController@index');
 Auth::routes();
-Route::get('/user', function(){
-    return view('user_main');
-})->middleware('auth','user');
-Route::get('/newcomplaint', 'UserController@newcomplaint'
-)->middleware('auth','user')->name('newcomplaint');
-Route::post('/lodge', 'UserController@lodgecomplaint'
-)->middleware('auth','user');
+Route::group(['prefix' => 'user', 'middleware' => ['auth','user']],  function () {
+    Route::get('/newcomplaint', 'UserController@newcomplaint')->name('newcomplaint');
+    Route::post('/lodge', 'UserController@lodgecomplaint');
+    Route::get('/', function(){
+        return view('user_main');
+    });
+    Route::get('/complaints', 'UserController@viewcomplaints');
+    Route::get('/complaints/{cid}', ['uses' =>'UserController@showComplaint', 'as'=>'singleComplaint']);
+});
+// Route::get('/user', function(){
+//     return view('user_main');
+// })->middleware('auth','user');
+
+
  
 Route::get('/officer', function(){
     echo "Hello Officer";
