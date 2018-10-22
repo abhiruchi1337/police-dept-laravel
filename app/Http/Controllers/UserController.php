@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     public function newcomplaint(Request $request){
-        $noncog=IncidentType::where('id','>=',3)->get();
+        $noncog=IncidentType::where('type','=',2)->get();
         $areas=Area::all();
         return view('lodgecomplaint')->with('ctype',$noncog)->with('areas',$areas);
     }
