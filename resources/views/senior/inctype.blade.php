@@ -100,7 +100,7 @@
                 </tr>
                     <tr>
 					<td><label>Assigned to :</label></td>
-					<td><input id="o_name" type="text" name="officer" placeholder="Enter officer.."></td>
+					<td><input id="o_name" type="text" name="officer" placeholder="Enter officer id.."></td>
 					</tr>
 				    <tr>
 					<input name="_token" type="hidden" value="{{ csrf_token() }}"/>

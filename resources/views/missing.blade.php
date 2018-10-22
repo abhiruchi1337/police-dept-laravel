@@ -57,7 +57,24 @@
 			<div id="livesearch"></div>
 		</form>
 		<h1 align="center">MISSING PERSONS</h1>
+		<?php
+		use App\Person;
+		$missing=Person::where('p_type',4)->get();
+		?>
+		
 		<div class="maincard">
+		@if($missing!= null)
+		@foreach($missing as $m)
+		<div class="card">
+		  <img src="{{asset('img/missing2.jpg')}}" alt="Person 2" height="150px" class="mp">
+		  <div class="container">
+			<h4><b>Name: {{$m->p_name}}</b></h4> 
+			<!-- <h4><b>Age: 35</b></h4> -->
+			<h4><b>Contact: {{$m->phone_number}}</b></h4>
+		  </div>
+		</div>
+		@endforeach
+		@endif
 		<div class="card">
 		  <img src="{{asset('img/missing1.jpg')}}" alt="Person 1" height="150px" class="mp" >
 		  <div class="container">
@@ -66,7 +83,7 @@
 			<h4><b>Contact: 9934055725</b></h4>
 		  </div>
 		</div>
-		<div class="card">
+		<!-- <div class="card">
 		  <img src="{{asset('img/missing2.jpg')}}" alt="Person 2" height="150px" class="mp">
 		  <div class="container">
 			<h4><b>Name: Katherine Keta Jones</b></h4> 
@@ -81,7 +98,7 @@
 			<h4><b>Age: 38</b></h4>
 			<h4><b>Contact: 9885370725</b></h4>
 		  </div>
-		</div>
+		</div> -->
 		</div><br><br>
 	</body>
 </html>

@@ -1,5 +1,6 @@
 <?php
 use App\OfficerIncident;
+use App\HelperFunctions;
 ?>
 <html>
 	<head>
@@ -43,7 +44,7 @@ use App\OfficerIncident;
 				@foreach($cmp as $c)
 				<tr>
 					<td class="case_id"><a href="{{route('singleOfficerCase',['cid' => $c->i_id])}}">{{$c->i_id}}</a></td>
-					<td><input type='text' class="textbox" value='{{$c->i_type}}'/></td>
+					<td><input type='text' class="textbox" value='{{HelperFunctions::getIncident($c->i_type)}}'/></td>
 					<td><input type='text' class="textbox" value='{{$c->status}}'/></td>
 					<td><input type='text' class="textbox" value='{{$c->i_date}}'/></td>
 					<td><input type='text' class="textbox" value='{{Area::where("a_id","=",$c->a_id)->first()->a_name}}'/></td>
@@ -52,7 +53,7 @@ use App\OfficerIncident;
 					?>
 					<td>
 					@foreach($assigned as $a)
-						{{$a['o_id']}}<br>
+						{{HelperFunctions::getOfficer($a['o_id'])}}<br>
 					@endforeach
 					</td>
 				</tr>

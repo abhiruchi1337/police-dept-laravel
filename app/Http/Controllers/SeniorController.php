@@ -53,6 +53,7 @@ class SeniorController extends Controller
                     $victim->p_name=$request->input('vname');
                 $victim->aadhar=$request->input('aadhar');
                 $victim->address=$request->input('address');
+                $victim->p_type=6;
                 $victim->save();
                 $vinc=new PersonIncident();
                 $vinc->i_id=$complaint->i_id;
@@ -71,6 +72,7 @@ class SeniorController extends Controller
             if($request->input('suspectname')!=''){
                 $suspect=new Person();
                 $suspect->p_name=$request->input('suspectname');
+                $suspect->p_type=5;
                 $suspect->save();
                 $vinc=new PersonIncident();
                 $vinc->i_id=$complaint->i_id;
@@ -98,11 +100,13 @@ class SeniorController extends Controller
             $victim->p_name=$request->input('vname');
             $victim->aadhar=$request->input('aadhar');
             $victim->address=$request->input('address');
+            $victim->p_type=6;
             $victim->save();
         }
         if($request->input('suspectname')!=''){
             $suspect=new Person();
             $suspect->p_name=$request->input('suspectname');
+            $victim->p_type=5;
             $suspect->save();
         }
         if($request->input('officer')!=''){

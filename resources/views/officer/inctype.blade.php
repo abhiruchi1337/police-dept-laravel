@@ -98,10 +98,10 @@
                     <td><label>Suspect name :</label></td>
                     <td><input id="suspect" type="text" name="suspectname" placeholder="Enter suspect name.."></td>
                 </tr>
-                    <tr>
+                    <!-- <tr>
 					<td><label>Assigned to :</label></td>
 					<td><input id="o_name" type="text" name="officer" placeholder="Enter officer.."></td>
-					</tr>
+					</tr> -->
 				    <tr>
 					<input name="_token" type="hidden" value="{{ csrf_token() }}"/>
 				        <td><input type="submit" value="submit" name="Update details"></td>

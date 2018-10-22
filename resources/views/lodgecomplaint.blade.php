@@ -53,25 +53,25 @@
                     <td><input type="date" name="DOI" placeholder="dd/mm/yyyy" ></td>
                 </tr>
                 <!-- <br><br> -->
-                <tr>
+                <!-- <tr>
                     <td><label>Victim name :</label></td>
                     <td><input id="name" type="text" name="vname" placeholder="Enter victim name.."></td>
-                </tr>
+                </tr> -->
                 <!--<br><br>-->
-                <tr>
+                <!-- <tr>
                         <td><label>Address :</label></td>    
                         <td><textarea id="addr" rows="4" cols="40" name="address" placeholder="Enter address.."></textarea></td>
-                </tr>
+                </tr> -->
                 <!-- <br><br> -->
-                <tr>
+                <!-- <tr>
                     <td><label>Aadhar number :</label></td>
                     <td><input id="aadhar" type="text" name="aadhar" placeholder="Enter aadhar no.."></td>
-                </tr>
+                </tr> -->
                 <!--<br><br>-->
-                <tr>
+                <!-- <tr>
                     <td><label>Suspect name :</label></td>
                     <td><input id="suspect" type="text" name="suspectname" placeholder="Enter suspect name.."></td>
-                </tr>
+                </tr> -->
                 <!--<br><br>-->
                 <tr>
                         <td><label>Other details :</label></td>    

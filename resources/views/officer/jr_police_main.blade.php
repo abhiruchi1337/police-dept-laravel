@@ -2,7 +2,7 @@
 @section('content')
 		<h1 id="police_dashboard">POLICE DASHBOARD</h1><hr>
 		<a class="button" id="register" href='{{url("officer/newcase")}}'>Register a case</a></div>
-		<button class="view">View officers</button>
+		<!-- <button class="view">View officers</button> -->
 		<br>
 		<br>
 		<div class="pending_cases"><h2>Pending Cases</h2>
