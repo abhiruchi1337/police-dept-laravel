@@ -15,7 +15,7 @@
 			<label>Type: {{$p->i_type}}</label><p>Description:{{$p->i_desc}} </p><label>Area: {{$p->a_id}}</label><hr>
 					@endforeach
 				@endif
-			<a href='{{url("/officer/cases")}}'>View all cases </a>
+			<a class="view" href='{{url("/officer/cases")}}'>View all cases </a>
 			</div>
 		</div>
 		</div>

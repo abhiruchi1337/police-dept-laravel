@@ -11,10 +11,27 @@
 		<header>
 			<img class="logo" src="{{asset('img/hawkins.png')}}" alt="Logo" height="120" width="100">
 			<span class="title">Hawkins Police Department </span>
-			<button class="button" id="register">Register</button>
-			<button class="button" id="login">Login</button>
 			<br><br>
 			<span class="slogan">Dedication against crime.</span>
+				 <!-- <li class="nav-item dropdown" align='right'> -->
+					{{-- <div  align='right'> --}}
+							{{-- <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> --}}
+								{{-- {{ Auth::user()->name }} <span class="caret"></span> --}}
+							{{-- </a> --}}
+
+							<div align="right" class='logoutbutton' aria-labelledby="navbarDropdown">
+									<a class="dropdown-item" href="{{ route('logout') }}"
+									   onclick="event.preventDefault();
+													 document.getElementById('logout-form').submit();">
+										{{ __('Logout') }}
+									</a>
+	
+									<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+										@csrf
+									</form>
+								</div>
+								</div>
+							<!-- </li> -->
 		</header>
 		<br><br><br><br>
 		<ul class="navbar">

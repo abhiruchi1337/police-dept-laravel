@@ -60,7 +60,7 @@ use App\Person;
 			$operson=Person::where('p_id','=',$o->o_id)->first();
 			?>
 			<tr>
-				<td class="case_id"><a href="{{route('singleOfficer',['oid' => $o->o_id])}}">{{$o->o_id}}</a></td>
+				<td class="case_id"><a class="single" href="{{route('singleOfficer',['oid' => $o->o_id])}}">{{$o->o_id}}</a></td>
 				<td><input type='text' disabled="disabled" class="textbox" value="{{$operson->p_name}}"/></td>
 				<td><input type='text' disabled="disabled" class="textbox" value="{{$o->d_id}}"/></td>
 				<td><input type='text' disabled="disabled" class="textbox" value="{{$o->rank}}"/></td>

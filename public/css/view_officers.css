@@ -111,7 +111,7 @@
 				cursor: pointer;
 			}
 			
-			a:link ,a:visited{
+			a:link:not(.single) ,a:visited:not(.single){
 				text-decoration:none;
 				color:white;
 			}

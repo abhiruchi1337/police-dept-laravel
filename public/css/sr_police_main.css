@@ -204,7 +204,7 @@
 				cursor: pointer;
 			}
 			
-			a:link ,a:visited{
+			a:link:not(.all) ,a:visited:not(.all){
 				text-decoration:none;
 				color:white;
 			}

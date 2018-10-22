@@ -11,11 +11,29 @@ use App\HelperFunctions;
 	</head>
 	<body>
 		<header>
-			<img class="logo" src="hawkins.png" alt="Logo" height="120" width="100">
+			<img class="logo" src="{{asset('img/hawkins.png')}}" alt="Logo" height="120" width="100">
 			<span class="title">Hawkins Police Department </span>
 			<br><br>
 			<span class="slogan">Dedication against crime.</span>
-			<div class="login_icon"><a href="#"><i class="fa fa-user-circle"></i></a> </div>
+			 <!-- <li class="nav-item dropdown" align='right'> -->
+					{{-- <div  align='right'> --}}
+							{{-- <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> --}}
+								{{-- {{ Auth::user()->name }} <span class="caret"></span> --}}
+							{{-- </a> --}}
+
+							<div align="right" class='logoutbutton' aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="{{ route('logout') }}"
+								   onclick="event.preventDefault();
+												 document.getElementById('logout-form').submit();">
+									{{ __('Logout') }}
+								</a>
+
+								<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+									@csrf
+								</form>
+							</div>
+							{{-- </div> --}}
+						<!-- </li> -->
 		</header>
 		<br><br><br><BR>
 		<ul class="navbar">
@@ -42,7 +60,7 @@ use App\HelperFunctions;
 			@if(isset($cmp))
 				@foreach($cmp as $c)
 				<tr>
-					<td class="case_id"><a href="{{route('singleCase',['cid' => $c->i_id])}}">{{$c->i_id}}</a></td>
+					<td class="case_id"><a class="single" href="{{route('singleCase',['cid' => $c->i_id])}}">{{$c->i_id}}</a></td>
 					<td><input type='text' class="textbox" value='{{HelperFunctions::getIncident($c->i_type)}}'/></td>
 					<td><input type='text' class="textbox" value='{{$c->status}}'/></td>
 					<td><input type='text' class="textbox" value='{{$c->i_date}}'/></td>

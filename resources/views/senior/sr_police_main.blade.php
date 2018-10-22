@@ -69,7 +69,7 @@
 		<label>Type: {{$p->i_type}}</label><p>Description:{{$p->i_desc}} </p><label>Area: {{$p->a_id}}</label><hr>
 				@endforeach
 			@endif
-		<a href='{{url("/senior/cases")}}'>View all cases </a>
+		<a class="all" href='{{url("/senior/cases")}}'>View all cases </a>
 		</div>
 		</div>
 

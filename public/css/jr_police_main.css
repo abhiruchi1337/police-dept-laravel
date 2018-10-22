@@ -177,7 +177,7 @@
 				cursor: pointer;
 			}
 			
-			a:link ,a:visited{
+			a:link:not(.view) ,a:visited:not(.view){
 				text-decoration:none;
 				color:white;
 			}
