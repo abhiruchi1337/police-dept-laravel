@@ -106,7 +106,7 @@
 				text-align: center;
 				color:#22335D;
 			}
-			input[type=text]:not(#search),input[type=date],select{
+			input[type=text]:not(#search),input[type=date],input[type=password],input[type=email],select{
 				padding: 12px;
 				border: 1px solid #ccc;
                 display:inline-block;
@@ -129,10 +129,13 @@
                 border-radius:4px;
                 width:100%;
 			}
-			#login, #register{
-				position:relative;
-				float:right;
-				top: 30px;
+
+			hr{
+					border-width:4px;
+				}
+				.logoutbutton{
+					 position: absolute; 
+				top: 50px;
 				background-color: #22335D;
 					border: none;
 					color: white;
@@ -143,21 +146,11 @@
 					font-size: 16px;
 					margin: 0px 5px;
 					cursor: pointer;
+					left:90%;
 				}
-			hr{
-					border-width:4px;
-				}
-				.login_icon a{
-					float: right;
-					width: 10%;
-					text-align: center;
-					transition: all 0.3s ease;
-					color: #22335D;
-					font-size: 36px;
-				}
-				a:visited:not(.icon){
+				
+				a:link ,a:visited{
+					text-decoration:none;
 					color:white;
 				}
-				a:link{
-					text-decoration:none;
-				}
+				

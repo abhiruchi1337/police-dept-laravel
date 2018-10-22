@@ -11,7 +11,25 @@
 			<span class="title">Hawkins Police Department </span>
 			<br><br>
 			<span class="slogan">Dedication against crime.</span>
-			<div class="login_icon"><a class="icon" href="#"><i class="fa fa-user-circle"></i></a></div>
+			          <!-- <li class="nav-item dropdown" align='right'> -->
+						 {{-- <div  align='right'>  --}}
+							{{-- <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> --}}
+								{{-- {{ Auth::user()->name }} <span class="caret"></span> --}}
+							{{-- </a> --}}
+
+							<div class='logoutbutton' aria-labelledby="navbarDropdown">
+								<a class="dropdown-item" href="{{ route('logout') }}"
+								   onclick="event.preventDefault();
+												 document.getElementById('logout-form').submit();">
+									{{ __('Logout') }}
+								</a>
+
+								<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+									@csrf
+								</form>
+							</div>
+							</div>
+						<!-- </li> -->
 		</header>
 		<br><br><br><br>
 		<ul class="navbar">
@@ -59,8 +77,10 @@
 				        <td><label>Address :</label></td>    
                         <td><textarea id="addr" rows="4" cols="40" name="addr" placeholder="Enter address.."></textarea></td>
 					</tr>
-				
-                        <div class="form-group row">
+					<tr>
+						<td><label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label></td>
+						<td><input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required></td></tr>
+                        {{-- <tr><div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
@@ -73,28 +93,29 @@
                                 @endif
                             </div>
                         </div>
+					</tr> --}}
+                        {{-- <div class="form-group row"> --}}
+                            <tr><td><label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label></td>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+                            {{-- <div class="col-md-6"> --}}
+                                <td><input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required></td></tr>
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
+                                {{-- @if ($errors->has('password'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('password') }}</strong>
                                     </span>
                                 @endif
                             </div>
-                        </div>
+                        </div> --}}
 
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                        {{-- <div class="form-group row"> --}}
+                            <tr>
+								<td><label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label></td>
 
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
+                            {{-- <div class="col-md-6"> --}}
+                                <td><input id="password-confirm" type="password" class="form-control" name="password_confirmation" required></td></tr>
+                            {{-- </div>
+                        </div> --}}
 
                 <!-- <br><br> -->
 				    <tr>

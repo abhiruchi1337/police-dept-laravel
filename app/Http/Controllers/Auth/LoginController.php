@@ -47,7 +47,7 @@ class LoginController extends Controller
       elseif (Auth::user()->type==2){
         return redirect('/officer') ;
       } else {
-        return redirect('/officer');
+        return redirect('/senior');
       }
     
         echo $redirectstr.'<br>';
