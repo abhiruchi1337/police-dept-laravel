@@ -10,19 +10,19 @@ use App\OfficerIncident;
 	</head>
 	<body>
 		<header>
-			<img class="logo" src="hawkins.png" alt="Logo" height="120" width="100">
+			<img class="logo" src="{{asset('hawkins.png')}}" alt="Logo" height="120" width="100">
 			<span class="title">Hawkins Police Department </span>
 			<br><br>
 			<span class="slogan">Dedication against crime.</span>
 			<div class="login_icon"><a href="#"><i class="fa fa-user-circle"></i></a> </div>
 		</header>
-		<br><br><br><BR>
+		<br><br><br><br>
 		<ul class="navbar">
-		<li class="nav"> <a href="departments" >Departments</a></li>
-		<li class="nav"><a href="safety tips" > Safety Tips</a></li>
-		<li class="nav"><a href="missing persons" > Missing Persons</a></li>
-		<li class="nav"><a href="lodge a complaint" > Lodge a complaint</a></li>
-		<li class="nav"><a href="contact us" > Contact us</a></li>
+		<li class="nav"> <a href="{{url('departments')}}" >Departments</a></li>
+		<li class="nav"><a href="{{url('safety')}}" > Safety Tips</a></li>
+		<li class="nav"><a href="{{url('missing')}}" > Missing Persons</a></li>
+		<li class="nav"><a href="{{route('login')}}" > Lodge a complaint</a></li>
+		<li class="nav"><a href="{{url('contact')}}" > Contact us</a></li>
 		<li class="search"><input type="text" placeholder="Search.."></li>
 		</ul>
 		<h1 id="police_dashboard">POLICE DASHBOARD</h1><hr>

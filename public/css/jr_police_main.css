@@ -73,7 +73,7 @@
 			#police_dashboard{
 				margin: 10px;
 			}
-			button.register, .view{
+			.button, .view{
 			position:relative;
 			background-color: #22335D;
 				border: none;
@@ -85,6 +85,10 @@
 				font-size: 16px;
 				margin: 5px 60px;
 				cursor: pointer;
+				left:30%;
+			}
+			a:visited{
+				text-decoration:none;
 			}
 			#cases{
 				margin: 5px 60px 0 0;

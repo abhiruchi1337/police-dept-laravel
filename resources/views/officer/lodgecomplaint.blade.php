@@ -7,20 +7,18 @@
 	</head>
 	<body>
 		<header>
-			<img class="logo" src="hawkins.png" alt="Logo" height="120" width="100">
+			<img class="logo" src="{{asset('img/hawkins.png')}}" alt="Logo" height="120" width="100">
 			<span class="title">Hawkins Police Department </span>
-			<button class="button" id="register">Register</button>
-			<button class="button" id="login">Login</button>
 			<br><br>
 			<span class="slogan">Dedication against crime.</span>
 		</header>
 		<br><br><br><br>
 		<ul class="navbar">
-		<li class="nav"> <a href="departments" >Departments</a></li>
-		<li class="nav"><a href="safety tips" > Safety Tips</a></li>
-		<li class="nav"><a href="missing persons" > Missing Persons</a></li>
-		<li class="nav"><a href="lodge a complaint" > Lodge a complaint</a></li>
-		<li class="nav"><a href="contact us" > Contact us</a></li>
+		<li class="nav"> <a href="{{url('departments')}}" >Departments</a></li>
+		<li class="nav"><a href="{{url('safety')}}" > Safety Tips</a></li>
+		<li class="nav"><a href="{{url('missing')}}" > Missing Persons</a></li>
+		<li class="nav"><a href="{{route('login')}}" > Lodge a complaint</a></li>
+		<li class="nav"><a href="{{url('contact')}}" > Contact us</a></li>
 		<li class="search"><input id="search" type="text" placeholder="Search.."></li>
         </ul>
 		<div>

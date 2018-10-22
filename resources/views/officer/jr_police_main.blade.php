@@ -1,26 +1,9 @@
 @extends('layouts.officer')
 @section('content')
 		<h1 id="police_dashboard">POLICE DASHBOARD</h1><hr>
-		<select id="cases">
-			<option value="" disabled selected>Cases</option>
-			<option value="your cases">Your cases</option>
-			<option value="all cases">All cases</option>
-		</select>
-		<a class="register" href='{{url("officer/newcase")}}'>Register a case</a>
+		<a class="button" id="register" href='{{url("officer/newcase")}}'>Register a case</a></div>
 		<button class="view">View officers</button>
 		<br>
-		<div class="new_pending">
-		<div class="new_cases"><h2>New Cases</h2>
-			<button class="accordion">View New Cases</button>
-			<div class="panel">
-			<h3>Case 1</h3>
-			<label>Type: abc</label><p>Description:wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwpppppppppppppppppppppppppppppppp </p><label>Area: </label><hr>
-			<h3>Case 1</h3>
-			<label>Type: abc</label><p>Description: </p><label>Area: </label><hr>
-			<h3>Case 1</h3>
-			<label>Type: abc</label><p>Description: </p><label>Area: </label><hr>
-			</div>
-		</div>
 		<br>
 		<div class="pending_cases"><h2>Pending Cases</h2>
 		
@@ -33,31 +16,9 @@
 					@endforeach
 				@endif
 			<a href='{{url("/officer/cases")}}'>View all cases </a>
-			<!-- <h3>Case 1</h3>
-			<label>Type: abc</label><p>Description:wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww </p><label>Area: </label><hr>
-			<h3>Case 1</h3>
-			<label>Type: abc</label><p>Description: </p><label>Area: </label><hr>
-			<h3>Case 1</h3>
-			<label>Type: abc</label><p>Description: </p><label>Area: </label><hr> -->
 			</div>
 		</div>
 		</div>
-
-		<div class="recent_cases">
-			<h2 style="text-align: center;">Recent Cases</h2><hr>
-			<div class="temp">
-				<h3>Case 1</h3>
-				<label>Type: abc</label><br>
-				<label>Area: xyz</label><hr>
-				<h3>Case 2</h3>
-				<label>Type: abc</label><br>
-				<label>Area: xyz</label><hr>
-				<h3>Case 3</h3>
-				<label>Type: abc</label><br>
-				<label>Area: xyz</label><hr>
-			</div>
-		</div>
-
 		<script>
 		var acc = document.getElementsByClassName("accordion");
 		var acc2 = document.getElementsByClassName("accordion2");
