@@ -18,13 +18,13 @@
 		</header>
 		<br><br><br><br>
 		<ul class="navbar">
-		<li class="nav"> <a href="departments" >Departments</a></li>
-		<li class="nav"><a href="safety tips" > Safety Tips</a></li>
-		<li class="nav"><a href="missing persons" > Missing Persons</a></li>
-		<li class="nav"><a href="lodge a complaint" > Lodge a complaint</a></li>
-		<li class="nav"><a href="contact us" > Contact us</a></li>
-		<li class="search"><input id="search" type="text" placeholder="Search.."></li>
-        </ul>
+		<li class="nav"> <a href="{{url('departments')}}" >Departments</a></li>
+		<li class="nav"><a href="{{url('safety')}}" > Safety Tips</a></li>
+		<li class="nav"><a href="{{url('missing')}}" > Missing Persons</a></li>
+		<li class="nav"><a href="{{route('login')}}" > Lodge a complaint</a></li>
+		<li class="nav"><a href="{{url('contact')}}" > Contact us</a></li>
+		<li class="search"><input type="text" placeholder="Search.."></li>
+		</ul>
         <h1 class="dash">POLICE DASHBOARD</h1>
 		<div>
 			<form id="officerform" name="officerdetail" method="post" action="{{route('updateOfficer',['oid' => $officer->o_id])}}">

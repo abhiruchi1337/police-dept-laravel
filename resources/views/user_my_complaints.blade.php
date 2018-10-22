@@ -16,13 +16,12 @@ use App\Area;?>
 		</header>
 		<br><br><br><BR>
 		<ul class="navbar">
-		<li class="nav"> <a href="departments" >Departments</a></li>
-		<li class="nav"><a href="safety tips" > Safety Tips</a></li>
-		<li class="nav"><a href="missing persons" > Missing Persons</a></li>
-		<li class="nav"><a href="lodge a complaint" > Lodge a complaint</a></li>
-		<li class="nav"><a href="contact us" > Contact us</a></li>
-		<li class="search"><input type="text" placeholder="Search.."></li>
-		</ul>
+		<li class="nav"> <a href="{{url('departments')}}" >Departments</a></li>
+		<li class="nav"><a href="{{url('safety')}}" > Safety Tips</a></li>
+		<li class="nav"><a href="{{url('missing')}}" > Missing Persons</a></li>
+		<li class="nav"><a href="{{route('login')}}" > Lodge a complaint</a></li>
+		<li class="nav"><a href="{{url('contact')}}" > Contact us</a></li>
+        </ul>
 		<h1 id="police_dashboard">USER DASHBOARD</h1><hr>
 		<h2>MY COMPLAINTS</h2><br>
 		<table class="table">
