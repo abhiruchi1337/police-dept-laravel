@@ -4,7 +4,8 @@
 		<title>Home Page</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/home.css') }}">
-		
+		<!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
+        <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
 	</head>
 	<body>
 		<header>
@@ -23,7 +24,8 @@
                             <a href="{{ route('login') }}" class='button' id='login'>Login</a>
                             <a href="{{ route('register') }}" class='button' id='register'>Register</a>
                         @else
-                            <li class="nav-item dropdown">
+                            <!-- <li class="nav-item dropdown" align='right'> -->
+                            <div class='button' align='right'>
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
@@ -39,7 +41,8 @@
                                         @csrf
                                     </form>
                                 </div>
-                            </li>
+                                </div>
+                            <!-- </li> -->
                         @endguest
              
 			<!-- <button class="button" id="register">Register</button>
